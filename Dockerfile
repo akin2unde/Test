@@ -24,4 +24,4 @@ WORKDIR /app
 COPY --from=build /app/publish .
 
 # Entry point when the container starts
-ENTRYPOINT ["dotnet", "Test.dll"]
+ENTRYPOINT ["./Test", "--urls", "http://*:5002"]
